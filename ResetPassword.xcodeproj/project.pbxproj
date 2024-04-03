@@ -13,6 +13,9 @@
 		88B7B5102BBD877A00C7744E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7B50E2BBD877A00C7744E /* Main.storyboard */; };
 		88B7B5122BBD877C00C7744E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B7B5112BBD877C00C7744E /* Assets.xcassets */; };
 		88B7B5152BBD877C00C7744E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B7B5132BBD877C00C7744E /* LaunchScreen.storyboard */; };
+		88B7B51D2BBD87A800C7744E /* Addsubview + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7B51C2BBD87A800C7744E /* Addsubview + UIView.swift */; };
+		88B7B51F2BBD885700C7744E /* HexColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7B51E2BBD885700C7744E /* HexColorExtension.swift */; };
+		88B7B5262BBD8AEF00C7744E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 88B7B5252BBD8AEF00C7744E /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		88B7B5112BBD877C00C7744E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B7B5142BBD877C00C7744E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88B7B5162BBD877C00C7744E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B7B51C2BBD87A800C7744E /* Addsubview + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Addsubview + UIView.swift"; sourceTree = "<group>"; };
+		88B7B51E2BBD885700C7744E /* HexColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B7B5262BBD8AEF00C7744E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,49 @@
 		88B7B5072BBD877900C7744E /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
-				88B7B5082BBD877A00C7744E /* AppDelegate.swift */,
-				88B7B50A2BBD877A00C7744E /* SceneDelegate.swift */,
+				88B7B5232BBD891C00C7744E /* res */,
+				88B7B5222BBD890000C7744E /* app */,
+				88B7B5212BBD886300C7744E /* main */,
+				88B7B5202BBD885A00C7744E /* extensions */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		88B7B5202BBD885A00C7744E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88B7B51C2BBD87A800C7744E /* Addsubview + UIView.swift */,
+				88B7B51E2BBD885700C7744E /* HexColorExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		88B7B5212BBD886300C7744E /* main */ = {
+			isa = PBXGroup;
+			children = (
 				88B7B50C2BBD877A00C7744E /* ViewController.swift */,
 				88B7B50E2BBD877A00C7744E /* Main.storyboard */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		88B7B5222BBD890000C7744E /* app */ = {
+			isa = PBXGroup;
+			children = (
+				88B7B5082BBD877A00C7744E /* AppDelegate.swift */,
+				88B7B50A2BBD877A00C7744E /* SceneDelegate.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		88B7B5232BBD891C00C7744E /* res */ = {
+			isa = PBXGroup;
+			children = (
 				88B7B5112BBD877C00C7744E /* Assets.xcassets */,
 				88B7B5132BBD877C00C7744E /* LaunchScreen.storyboard */,
 				88B7B5162BBD877C00C7744E /* Info.plist */,
 			);
-			path = ResetPassword;
+			path = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +123,9 @@
 			dependencies = (
 			);
 			name = ResetPassword;
+			packageProductDependencies = (
+				88B7B5252BBD8AEF00C7744E /* SnapKit */,
+			);
 			productName = ResetPassword;
 			productReference = 88B7B5052BBD877900C7744E /* ResetPassword.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = 88B7B4FC2BBD877900C7744E;
+			packageReferences = (
+				88B7B5242BBD8AEF00C7744E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 88B7B5062BBD877900C7744E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B7B50D2BBD877A00C7744E /* ViewController.swift in Sources */,
+				88B7B51F2BBD885700C7744E /* HexColorExtension.swift in Sources */,
 				88B7B5092BBD877A00C7744E /* AppDelegate.swift in Sources */,
+				88B7B51D2BBD87A800C7744E /* Addsubview + UIView.swift in Sources */,
 				88B7B50B2BBD877A00C7744E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,10 +339,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QB9SZGTXYL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ResetPassword/Info.plist;
+				INFOPLIST_FILE = ResetPassword/res/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +355,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,10 +368,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QB9SZGTXYL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ResetPassword/Info.plist;
+				INFOPLIST_FILE = ResetPassword/res/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +384,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -360,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88B7B5242BBD8AEF00C7744E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88B7B5252BBD8AEF00C7744E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88B7B5242BBD8AEF00C7744E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88B7B4FD2BBD877900C7744E /* Project object */;
 }
